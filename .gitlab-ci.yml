@@ -1,0 +1,15 @@
+image: docker:latest
+
+services:
+  - docker:dind
+
+stages:
+  - release
+
+realease_api:
+  stage: release
+  script:
+    - echo "$REGISTRY_PASSWORD" | docker login --username vujanile --password-stdin
+    - docker build -t $IMAGE_TAG .
+    - docker push $IMAGE_TAG
+  when: manual
