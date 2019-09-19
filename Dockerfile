@@ -32,4 +32,6 @@ RUN if [ $WITH_XDEBUG = "true" ] ; then \
 	    docker-php-ext-enable xdebug; \
 	fi ;
 
+USER www-data
+
 WORKDIR /var/www/app
