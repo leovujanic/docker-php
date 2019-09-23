@@ -25,6 +25,4 @@ RUN mkdir -p /var/app/cache/ && mkdir -p /var/app/log/ && mkdir -p /var/app/sess
     && chown -R www-data:www-data /var/app/cache \
     && chown -R www-data:www-data /var/app/sessions
 
-USER www-data
-
 WORKDIR /var/www/app
