@@ -21,6 +21,7 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 COPY custom.ini /usr/local/etc/php/conf.d/custom.ini
 
 RUN mkdir -p /var/app/cache/ && mkdir -p /var/app/log/ && mkdir -p /var/app/sessions \
+    && chown -R www-data:www-data /var/app \
     && chown -R www-data:www-data /var/app/log \
     && chown -R www-data:www-data /var/app/cache \
     && chown -R www-data:www-data /var/app/sessions
