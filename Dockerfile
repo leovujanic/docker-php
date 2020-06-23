@@ -1,4 +1,4 @@
-FROM php:7.2.14-fpm
+FROM php:7.4-fpm
 
 LABEL maintainer="Leo Vujanić <leonard.vujanic@gmail.com>"
 
